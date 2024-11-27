@@ -6,3 +6,22 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+# server
+axum = "0.7.4"
+tokio = { version = "1.36.0", features = ["full"] }
+
+# sql
+sqlx = { version = "0.8.2", features = [
+  "postgres",
+  "runtime-tokio",
+  "tls-native-tls",
+  "macros",
+] }
+
+# serde
+serde = { version = "1.0.196", features = ["derive"] }
+serde_json = "1.0.113"
+
+# env
+dotenvy = "0.15.7"
